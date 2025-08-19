@@ -36978,6 +36978,22 @@ q-DMtLSyNT.js#s_nAKCPlsUOyg[0]" on:click="q-DMtLSyNT.js#s_PlSV44FG20w[1]" q:key=
       lastScrollY = currentScrollY;
     });
   </script>
+
+<!-- Вставляем сюда твой скрипт -->
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const reference = Array.from(document.querySelectorAll('h2, p, span, div'))
+      .find(el => el.textContent.includes('Ключевые принципы борьбы с отмыванием денег'));
+
+    if (reference) {
+        const myBlock = document.createElement('div');
+        myBlock.id = 'my-local-info';
+        myBlock.innerHTML = `<p>Вот моя дополнительная информация после FATF.</p>`;
+        reference.parentNode.insertBefore(myBlock, reference.nextSibling);
+    }
+});
+</script>
+
 </body>
 
 <!--/qv-->
